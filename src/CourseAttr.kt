@@ -1,2 +1,2 @@
-class CourseAttr(var id : Int, var name : String,var description  : String) {
+open class CourseAttr(var id : Int, var name : String,var description  : String) {
 }
