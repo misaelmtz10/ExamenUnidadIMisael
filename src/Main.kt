@@ -7,7 +7,9 @@ fun main (args: Array<String>){
     var nombre : String?
     var descripcion : String?
 
-    //val programingCourse = ProgramingCourse()
+    var listCourse : MutableList<ProgramingCourse> = mutableListOf()
+
+    val programingCourse = GestionProgramingCourse()
 
     do {
         println("Bienvenido al sistema de cursos")
@@ -23,7 +25,9 @@ fun main (args: Array<String>){
 
                     when(opcMenSecundario){
                         1 -> {
-
+                            println("Ingresa el nombre del curso")
+                            nombre = scanner.next()
+                            println("")
                             break;
                         }
                         2 -> {
@@ -49,6 +53,31 @@ fun main (args: Array<String>){
                 println("1) Registrar curso de programación \n 2) Actualizar curso de programación \n 3) " +
                         "Eliminar curso de programación \n 4) Obtener todos los cursos de programación \n 5) Regresar al menú principal \n Elige...")
                 opcMenSecundario = scanner.nextInt()
+                when(opcMenSecundario){
+                    1 -> {
+                        println("Ingresa el nombre del curso")
+                        nombre = scanner.next()
+                        println("Ingresa la descripción")
+                        descripcion = scanner.next()
+                        listCourse = programingCourse.addProgramingCourse(nombre, descripcion)
+                        break;
+                    }
+                    2 -> {
+
+                        break;
+                    }
+                    3 -> {
+                        break;
+                    }
+                    4 -> {
+                        break;
+                    }
+                    5 -> {
+                        println("Regresando al menú principal")
+                        break;
+                    }
+                    else -> println("Opcción invalida")
+                }
             }
             3 -> {
                 // aqui va la consulta general

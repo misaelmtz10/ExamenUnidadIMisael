@@ -6,11 +6,11 @@ open class ProgramingCourse(id : Int, name : String,description  : String) : Cou
 class GestionProgramingCourse{
 
     val listCouse : MutableList<ProgramingCourse> = mutableListOf()
-    fun addProgramingCourse(id:Int, name:String, description: String):Int{
+    fun addProgramingCourse(name:String, description: String):MutableList<ProgramingCourse>{
         // Registrar curso
         val listaAdd = ProgramingCourse(listCouse.size+1, name, description)
         listCouse.add(listaAdd)
-        return listCouse.size-1
+        return listCouse
     }
 
     fun editProgramingCourse(id: Int, name : String, description  : String){
